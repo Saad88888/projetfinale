@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+    
+    <?!= include("calendriercss"); ?>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+        <?!= include("momentjs"); ?>
+        <?!= include("calendrierjs"); ?>
+                        
+    
+    <?!= include("pagecss"); ?>
+    
+    
+    
+</head>
+
+<body style="overflow:hidden">
+    
+<div class="container" id="contenu" >
+    <div class="row">
+        <div class="input-field col s6">
+            <input id="pr" type="text" class="validate" autocomplete="off" required>
+            <label class="black-text" for="pr">Prenom</label>
+        </div>
+    
+    <div class="row">
+    <div class="input-field col s6">
+        <input id="Nm" type="text" class="validate" autocomplete="off" required>
+        <label class="black-text" for="Nm">Nom</label>
+    </div>
+    
+
+
+     <div class="row">
+    <div class="input-field col s6">
+        <input id="email" type="email" class="validate" autocomplete="off" required>
+        <label class="black-text" for="email">Courriel</label>
+    </div>
+
+    <div class="row">
+        <div class="input-field col s6">
+            <input id="Address" type="text" required>
+            <label class="black-text" for="Address">Adresse</label>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="Phone" type="text" autocomplete="off" required pattern="^\d{10}$" >
+                <label class="black-text">Téléphone</label>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s6" required>
+                    <select id="Service">
+                        <option value="" disabled selected class="black-text">Choisissez Un Service</option>
+                        <option value="Nettoyage 9 ans et moins">Nettoyage 9 ans et moins</option>
+                        <option value="Nettoyage 10 à 16 ans">Nettoyage 10 à 16 ans</option>
+                        <option value="Nettoyage 16 à 65 ans">Nettoyage 16 à 65 ans</option>
+                        <option value="Nettoyage 65 ans et plus">Nettoyage 65 ans et plus</option>
+                        <option value="Blanchiment 18 ans et plus">Blanchiment 18 ans et plus</option>
+                        <option value="1er rdv:Gouttiere de blanchiment: empreintes">1er rdv:Gouttiere de blanchiment: empreintes</option>
+                        <option value="2er rdv:Gouttiere de blanchiment: remise">2er rdv:Gouttiere de blanchiment: remise</option>
+                        <option value="Instruction d'hygiene">Instruction d'hygiene</option>
+                    </select>
+                    <label class="black-text">Service</label>
+                </div>
+
+                 <div class="row">
+                    <div class="input-field col s12">
+                        <input disabled  id="estimation" type="text" class="validate black-text">
+                             <label for="estimation" class="active black-text">Prix</label>
+                    </div>
+                 </div>
+
+
+                <div class="input-field col s6">
+                    <input placeholder="" id="Heure" type="text" class="datepicker" type="text" autocomplete="off" required />
+
+                    <label for="aHeure" class="black-text">Réservez apartir</label>
+                </div>
+ 
+
+                <div class="input-field col s6">
+                    <input placeholder="" disabled id="DeHeure" type="text" class="datepicker black-text" type="text" autocomplete="off"  required />
+
+                    <label for="DeHeure" class="active black-text">Jusq'au</label>
+                </div>
+                
+                <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea" maxlength="100"></textarea>
+          <label for="textarea1" class="black-text">Commentaire et Message</label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+                <div class="row">
+
+                    <button id="btn"  class="waves-effect waves-light accent-3 btn-small"><i
+                            class="material-icons left">cloud</i>Soumettre</button>
+
+                </div>
+            </div>
+        
+        
+        </div>
+    </div>
+</div>
+                        
+                        
+
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+                        <?!= include("pagejs"); ?>
+                        
+</body>
+
+
+</html>
